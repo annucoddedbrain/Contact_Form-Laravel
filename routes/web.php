@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MemberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 
 
 Route::view('add', 'addmember');
+Route::post('add', [MemberController::class, 'addData']);
